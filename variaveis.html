@@ -1,0 +1,20 @@
+<meta charset="UTF-8">
+
+<script>
+
+    let ano = 2021; /*Criamos a variável ano para, num só local, podermos ter acesso a informação e fazermos alterações em massa de um valor*/
+    document.write("Flávio tem  " + (ano - 1977) + " anos" + "<br>");
+    document.write("Joaquim tem " + (ano - 1996) + " anos" + "<br>"); 
+    document.write("Barney tem " + (ano - 1976) + " anos" + "<br>");
+
+    ano = 2022; /*Para reatribuirmos o valor da variável não é necessário o uso do var, nem do let*/
+    document.write("Flávio tem  " + (ano - 1977) + " anos" + "<br>");
+
+
+    let idadeFlavio = 39;
+    let idadeJoaquim = 20;
+    let idadeBarney = 41;
+    let media = ((idadeBarney + idadeFlavio + idadeJoaquim)/3); /*As variáveis melhoram a legibilidade do código, sabemos que essa conta se refere ao cáculo da média das idades dos 3 homens*/
+    document.write("A média das idades é " + Math.round(media)); /*Math.round arredonda o valor que está dentro do parâmetro*/
+
+</script>
