@@ -4,11 +4,16 @@
 
 <br>
 
-
 <script>
 
-    /* É uma convenção que todas as funções que criamos estejam no início do código JS */
-    /* Funções indicam ações, então convencionalmente a nomeamos com verbos */
+    /* 
+
+    É uma convenção que todas as funções que criamos estejam no início do código JS.
+    Funções indicam ações, então convencionalmente a nomeamos com verbos.
+    Funções tornam legiveis as intenções, são um conjunto de instruções
+
+    */
+   
 
     function pulaLinha() { /*Tudo que estiver dentro do bloco da função, entre as chaves, pertence á função pulaLinha*/
 
@@ -24,4 +29,40 @@
 
 
     
+</script>
+
+<br>
+
+<h2> Funções com parâmetros </h2>
+
+<script>
+
+     /* 
+    
+    No lugar de document.write, queremos que a função "mostra" imprima o texto dentro do parâmetro. 
+    Isso faz com que o código seja de fácil leitura, pois o leitor só baterá o olho na função e saberá que sua iontenção é mostrar algo. 
+    
+    */
+
+    function mostra(saudacao) {  
+
+        document.write(saudacao); 
+        pulaLinha(); /* Uma função pode ter como instrução a chamada para outra função. */
+
+    }
+
+    /* 
+    
+    Quando "mostra" receber um parâmetro, ele será enviado para dentro da variável "saudação". 
+    Ao chegar nessa instruição, o JS interpretará como se saudacao fosse iugal à frase que queremos exibir. 
+    Ou seja, é criada uma variável em que saudação = parâmetro de "mostra"
+    Tendo definido o parâmetro da função, em document.write definimos a mesma palavra como parâmetro, chamando a nova variável sempre que a função "mostra" for exibida a tela. 
+    
+    */
+
+    
+    mostra("Olá mundo!"); 
+   
+    mostra("Saudações terráqueos!");
+
 </script>
