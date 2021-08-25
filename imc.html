@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+
+        document.write("<br><br>");
+
+    }
+
+    function mostra(frase) {
+
+        document.write(frase);
+        pulaLinha();
+
+    }
+
+    function calculaImc(peso, altura) {
+
+        let imc = peso / (altura * altura); // A variável recebe a função de calcular e no final deve devolver um resultado dentro da própria variável. Poŕem não declaramos na função que ela deve devolver o valor de IMC.
+        return imc; // Fazemos isso com o return. A variável imc guarda o resultado e a palavra return deixa disponível o resultado que foi calculado pela função. 
+    }
+
+    /*
+
+    Para simplificar, também podemos indicar que o return será o cálculo em si:
+
+    function calculaImc(peso, altura) {
+
+        return imc = peso / (altura * altura);
+
+    }
+
+    Porém dessa forma o cálculo não será gravado na variável imc, a função vai sempre retornar o valor do cálculo. 
+
+    */
+
+    let imcLuana = calculaImc(75, 1.65);
+    let imcAlexandre = calculaImc(70, 1.82);
+
+    mostra("O IMC da Luana é " + Math.round(imcLuana) + ".");
+    mostra("O IMC do Alexandre é " + Math.round(imcAlexandre) + ".");
+
+</script>
