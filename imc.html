@@ -3,20 +3,15 @@
 <script>
 
     function pulaLinha() {
-
         document.write("<br><br>");
-
     }
 
     function mostra(frase) {
-
         document.write(frase);
         pulaLinha();
-
     }
 
     function calculaImc(peso, altura) {
-
         let imc = peso / (altura * altura); // A variável recebe a função de calcular e no final deve devolver um resultado dentro da própria variável. Poŕem não declaramos na função que ela deve devolver o valor de IMC.
         return imc; // Fazemos isso com o return. A variável imc guarda o resultado e a palavra return deixa disponível o resultado que foi calculado pela função. 
     }

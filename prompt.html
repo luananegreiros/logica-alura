@@ -1,0 +1,31 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br><br>")
+    }
+
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    function calculaImc(peso, altura){
+        return peso / (altura * altura);
+    }
+
+    /*
+    
+    Prompt é uma função dentro do JS e que recebe como parâmetro uma pergunta e retorna um valor. 
+    
+    */
+    let nome = prompt("Oi! Qual seu nome? :)")
+    let pesoInformado = prompt(nome + ", informe seu peso, por gentileza:");
+    let alturaInformada = prompt("Por fim, informe sua altura:");
+
+    let imc = calculaImc(pesoInformado, alturaInformada);
+
+    document.write(nome + ", seu IMC é " + Math.round(imc) + " :)");
+
+</script>
