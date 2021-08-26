@@ -1,0 +1,41 @@
+<meta charset="UTF-8">
+
+
+
+<script>
+
+    function pulaLinha(){
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+    /// let vitorias = prompt("Entre com o número de vitórias:"); 
+    /// let empates = prompt("Entre com o número de empates:");
+
+    /// let pontos = vitorias * 3 + empates;  // 1 vitória vale 3 pontos e um empate vale 1 ponto.
+    
+    /// mostra("Seu time fez " + pontos + " pontos.");
+
+    /* 
+    
+        A entrada de valor pelo prompt sempre é uma string, exceto quando é multiplicada/dividida por um valor númerico. 
+        Nesse caso, se houver um número dentro da string esse número será convertido para valor númérico.
+        O retorno da variável mostra nos retornará um resultado incorreto do cálculo que fizemos ( pontos = vitorias * 3 + empates ) pois a variável 
+            vitorias será convertida para número, enquanto a variável empates será lido como string.
+
+    */
+
+    let vitorias = parseInt(prompt("Entre com o número de vitórias:")); 
+    let empates = parseInt(prompt("Entre com o número de empates:"));
+
+    let pontos = vitorias * 3 + empates; 
+
+    mostra("Seu time fez " + pontos + " pontos.");
+
+    // parseInt(texto) --> recebe um texto e retorna um número.
+
+</script>
