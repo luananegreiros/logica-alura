@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha() {
+        document.write("<br><br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+    
+    let vitorias2020 = parseInt(prompt("Entre com o número de vitórias do ano passado: "));
+    let empates2020 = parseInt(prompt("Entre com o número de empates do ano passado:"));
+    let pontos2020 = (vitorias2020 * 3) + empates2020;
+
+    mostra("O seu time fez " + pontos2020 + " pontos em 2020!");
+
+
+    let vitorias2021 = parseInt(prompt("Entre com o número de vitórias desse ano: "));
+    let empates2021 = parseInt(prompt("Entre com o número de empates desse ano:"));
+    let pontos2021 = (vitorias2021 * 3) + empates2021;
+
+    mostra("O seu time fez " + pontos2021 + " pontos em 2021.");
+
+
+    if (pontos2021 > pontos2020) {
+        mostra("Seu time evoluiu esse ano, parabéns!");
+    }
+
+    if (pontos2021 < pontos2020) {
+        mostra("Ano passado seu time foi um pouco melhor... Mas fique frio, ano que vem será um novo ano!");
+    }
+
+    if (pontos2021 == pontos2020) {
+        mostra("Seu time teve o mesmo resultado que o ano passado, parabéns pela constância!");
+    }
+
+</script>
