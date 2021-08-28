@@ -1,5 +1,7 @@
 <meta charset="UTF-8">
 
+<h1> Cálculo do IMC</h1>
+
 <script>
 
     function pulaLinha() {
@@ -30,10 +32,38 @@
 
     */
 
-    let imcLuana = calculaImc(75, 1.65);
-    let imcAlexandre = calculaImc(70, 1.82);
+    nome = prompt("Oi! Qual o seu nome?");
+    let alturaDaPessoa = prompt(nome +  ", qual sua altura?");
+    let pesoDaPessoa = prompt("E seu peso?")
+    let imcTotal = calculaImc(pesoDaPessoa, alturaDaPessoa);  
 
-    mostra("O IMC da Luana é " + Math.round(imcLuana) + ".");
-    mostra("O IMC do Alexandre é " + Math.round(imcAlexandre) + ".");
+    mostra(nome + " o seu IMC é " + Math.round(imcTotal) + ".");
 
+    if (imcTotal > 35){
+        mostra(nome + " seu IMC está acima da média recomendada pela OMS.");
+    }
+
+    if (imcTotal < 18.5){
+        mostra(nome + ", seu IMC está abaixo da média recomendada pela OMS.");
+    }
+
+    /*
+
+    if (imcTotal >= 18.5){
+        if (imcTotal <= 35){
+            mostra("Seu IMC está na média recomendada pela OMS.");
+        }
+    }
+
+
+    if(18.5 >= imcTotal <= 35){
+        mostra("mostra("Seu IMC está na média recomendada pela OMS.");
+    }
+
+    */
+
+    if (imcTotal >= 18.5 && imcTotal <= 35){ // o && significa "e". nesse caso, se imcTotal >= 18.5 E imcTotal <= 35.
+        mostra("Seu IMC está na média recomendada pela OMS.");
+    }
+    
 </script>
