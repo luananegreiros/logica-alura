@@ -1,0 +1,51 @@
+<meta charset="UTF-8">
+
+<script>
+    
+
+    function pulaLinha(){
+        document.write("<br><br>");
+    }
+
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    var numeroPensado = Math.round(Math.random() * 10); 
+    var nome = prompt("Olá! Qual seu nome?");
+    var chute = parseInt(prompt(nome + ", escolha um número de 0 a 10...")); 
+
+    /*
+    
+    if (chute == numeroPensado){
+        mostra("Nossa, pensei nesse mesmo número!");
+    }
+
+    if (chute != numeroPensado){ // se chute for DIFERENTE do número pensado
+        mostra("Tinha pensado em outro número, o " + numeroPensado + ".");
+    }
+
+    */
+
+    if (chute == numeroPensado){
+        mostra("Nossa, pensei nesse mesmo número!");
+    } else {
+        mostra("Tinha pensado em outro número, o " + numeroPensado + ".");
+    }
+
+    // No código acima ele diz "se o número inserido pelo usuário
+    // for igual ao número pensado, mostre "Nossa, pensei nesse mesmo número!",
+    // senão mostre ""Tinha pensado em outro número...".
+
+    /*
+
+    Math.random() --> devolve um valor aleatório, não inteiro entre 0 e 1.
+    Math.random() * 10 --> devolve um valor aleatório, porem andamos uma casa decimal a direita (0 a 9).
+    Math.round() --> arredonda o valor para o número inteiro mais próximo. Agora nosso código abrange de 0
+    a 10, pois se o número aleatório for 9.6, por exemplo, será arredondado para 10. 
+
+    */
+
+
+</script>
