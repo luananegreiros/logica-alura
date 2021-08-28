@@ -1,0 +1,25 @@
+<meta charset="UTF-8">
+
+<h1>Números pares de 0 a 100:</h1>
+
+<script>
+
+    function pulaLinha(){
+        document.write("<br>");
+    }
+
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    let pares = 0
+
+    while (pares <= 100){
+        mostra(pares);
+        pares = pares + 2;
+    }
+
+    mostra("FIM");
+
+</script>
