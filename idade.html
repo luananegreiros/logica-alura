@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+
+    let idade = parseInt(prompt("Digite sua idade"));
+
+    while (idade !== parseInt(idade)){
+      idade = parseInt(prompt("Por favor, insira sua idade:"));
+    }
+
+    if (idade === parseInt(idade)){
+        alert("Sua idade é: " + idade);
+    }
+
+    /*
+
+     while(idade == NaN) {
+        idade = parseInt(prompt("Digite sua idade"));    
+    }  
+
+    Não podemos comparar nenhum valor com o NaN usando ==. Se você abrir seu console agora e escrever NaN == NaN 
+    isso será falso! Para saber se um valor é NaN precisamos usar uma função específica, a isNaN. 
+    Essa função recebe um parâmetro e retorna true ou false caso o valor seja NaN ou não.
+
+    var idade = parseInt(prompt("Digite sua idade"));
+
+    while( isNaN(idade) ) {
+     idade = parseInt(prompt("Digite sua idade"));    
+    }
+
+    alert(idade);
+
+    */
+
+</script>
