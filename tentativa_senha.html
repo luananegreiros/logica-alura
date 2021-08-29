@@ -1,0 +1,35 @@
+<meta charset="UTF-8">
+
+<script>
+
+    let loginCadastrado = "alura";
+    let senhaCadastrada = "alura123";
+
+    let maximoTentativas = 3;
+    let tentativaAtual = 1;
+
+    let loginInformado = prompt("Informe seu login:");
+    let senhaInformada = prompt(loginInformado + ", informe sua senha:");
+
+    while (tentativaAtual <= maximoTentativas){
+
+        if (loginInformado == loginCadastrado && senhaInformada == senhaCadastrada){
+            alert("Bem vindo ao sistema!");
+
+            tentativaAtual = maximoTentativas; // se ele acertou, atribuo o número de tentativas atuais com o máximo de tentativas pra ele sair do loop e encerrar o programa.
+        } else {
+            
+            if (tentativaAtual == maximoTentativas){
+                alert("Número máximo de tentativas ultrapassado.");
+            } else {
+                alert("Dados incorretos, tente novamente.")
+
+                loginInformado = prompt("Informe seu login:");
+                senhaInformada = prompt(loginInformado + ", informe sua senha:");
+            }
+        }
+
+        tentativaAtual++
+    }
+   
+</script>
