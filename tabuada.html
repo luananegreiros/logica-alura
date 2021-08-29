@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha(){
+        document.write("<br><br>");
+    }
+
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    let multiplicador = 1;
+
+    while (multiplicador <= 10){
+        mostra(7 * multiplicador);
+        multiplicador++
+    }
+
+    mostra("FIM");
+
+    /*
+
+    for (espaço1; espaço 2; espaço 3){}
+    espaço 1 = inícialização do multiplicador (variável que será incrementada)
+    espaço 2 = condição de repetição
+    espaço 3 = incrementação da variável, pra que a condição de repetição seja alterada
+
+    */
+
+    for (let multiplicador = 1; multiplicador <= 10; multiplicador++){
+        mostra(8 * multiplicador);
+    }
+    
+</script>
