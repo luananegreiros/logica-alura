@@ -1,11 +1,12 @@
 <meta charset="UTF-8">
 
+<h1>Adivinhe o número que escolhi!</h1>
 <input/>
-<button> Adivinhe o número que escolhi! </button>
+<button> Escolha um número de 0 a 10 </button>
 
 <script>
 
-    let segredo = 5;
+    let segredo = Math.round(Math.random() * 10);
     let input = document.querySelector("input");  // inserimos o que está no "mundo HTML" na variável "input". o query.Selector recebe como parâmetro a tag que quer incluir no JS.
     
     // o teste não pode ser executado logo quando a página carrega, pois ele não vai dar chance do usuário inserir o input
@@ -18,6 +19,9 @@
         } else{
             alert("Você errou.")
         }
+
+        input.value = "";  // limpa o campo do formulário para nova tentativa. 
+        input.focus(); // coloca o foco novamente na caixinha do formulário, o | piscando pronto para receber novo valor. 
 
     }
 
