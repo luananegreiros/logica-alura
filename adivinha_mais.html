@@ -1,0 +1,34 @@
+<meta charset="UTF-8">
+
+<input/>
+<button> Adivinhe o número que escolhi! </button>
+
+<script>
+
+    let segredo = 5;
+    let input = document.querySelector("input");  // inserimos o que está no "mundo HTML" na variável "input". o query.Selector recebe como parâmetro a tag que quer incluir no JS.
+    
+    // o teste não pode ser executado logo quando a página carrega, pois ele não vai dar chance do usuário inserir o input
+    // e já vai devolver "você errou", pois o input vazio é diferente de 5.
+
+    function verifica(){ // por isso, eu "guardo" a ação dentro da função verifica
+
+        if (input.value == segredo){  // aqui o .value chama o valor inserido no input
+            alert("Você acertou!");
+        } else{
+            alert("Você errou.")
+        }
+
+    }
+
+    // queremos associar a função verifica() ao clique do botão.
+
+    let button = document.querySelector("button");
+    button.onclick = verifica; // .onclick significa "no clicar", quando clicar no botão;
+
+    // pra executarmos a ação da função verifica, escrevemos com parênteses, verifica(). 
+    // isso faz que a função seja executada assim que carregamos a página, pois o JS lê e entende que a estamos chamando.  
+    // mas não queremos isso, queremos que a função esteja vinculada ao onclick do botão 
+    // pra isso, associamos ao onclick a função sem a chamada pra ação, o ().
+   
+</script>
