@@ -1,0 +1,28 @@
+<meta charset="UTF-8">
+
+<script>
+
+    function pulaLinha(){
+        document.write("<br><br>");
+    }
+
+    function mostra(frase){
+        document.write(frase);
+        pulaLinha();
+    }
+
+    let totalFamiliares = parseInt(prompt("Quantas pessoas têm na sua família?"));
+    let totalIdades = 0;  // quando entrar no while, o total de idades será 0. 
+    let numero = 1;
+    
+    while (numero <= totalFamiliares) {
+        let idade = parseInt(prompt("Informe idade do familiar:"));   // conforme o loop for acontecendo, vão sendo atribuídos novos valores à variável idade;
+        totalIdades = totalIdades + idade;  // vai sendo somada a nova idade que o usuário inserir com a idade anterior e o valor vai sendo atribuído a variável totalIdade;
+        numero++;
+    }
+   
+    let mediaIdades = totalIdades/totalFamiliares;
+
+    mostra("A média de idades da sua família é " + mediaIdades + ".");
+
+</script>
