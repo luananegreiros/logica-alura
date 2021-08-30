@@ -8,6 +8,7 @@
 
     let segredo = Math.round(Math.random() * 10);
     let input = document.querySelector("input");  // inserimos o que está no "mundo HTML" na variável "input". o query.Selector recebe como parâmetro a tag que quer incluir no JS.
+    input.focus();
     
     // o teste não pode ser executado logo quando a página carrega, pois ele não vai dar chance do usuário inserir o input
     // e já vai devolver "você errou", pois o input vazio é diferente de 5.
