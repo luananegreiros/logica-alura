@@ -1,46 +1,28 @@
 <meta charset="UTF-8">
 
 <script>
-    
-
-    function pulaLinha(){
-        document.write("<br><br>");
-    }
-
-    function mostra(frase){
-        document.write(frase);
-        pulaLinha();
-    }
 
     function sorteio(n){
         return Math.round(Math.random() * n);
     }
 
-    var numeroPensado = sorteio(10); // variável irá retornar valor aleatório até o 10.
-    var nome = prompt("Olá! Qual seu nome?");
-    var chute = parseInt(prompt(nome + ", escolha um número de 0 a 10...")); 
+    let numeroPensado = sorteio(10); // variável irá retornar valor aleatório até o 10.
+    let nome = prompt("Olá! Qual seu nome?");
+     
+    let tentativas = 1;
 
-    /*
-    
-    if (chute == numeroPensado){
-        mostra("Nossa, pensei nesse mesmo número!");
+    while (tentativas <= 3){
+        let chute = parseInt(prompt(nome + ", escolha um número de 0 a 10..."));
+
+        if (chute == numeroPensado){
+            alert("Nossa, pensei nesse mesmo número!");
+            break; //quebra o loop se entrar nessa repetição. então se acertar, não pergunta de novo. 
+        } else {
+            alert("Pensei em outro número...");
+        }
+
+        tentativas++;
     }
-
-    if (chute != numeroPensado){ // se chute for DIFERENTE do número pensado
-        mostra("Tinha pensado em outro número, o " + numeroPensado + ".");
-    }
-
-    */
-
-    if (chute == numeroPensado){
-        mostra("Nossa, pensei nesse mesmo número!");
-    } else {
-        mostra("Tinha pensado em outro número, o " + numeroPensado + ".");
-    }
-
-    // No código acima ele diz "se o número inserido pelo usuário
-    // for igual ao número pensado, mostre "Nossa, pensei nesse mesmo número!",
-    // senão mostre ""Tinha pensado em outro número...".
 
     /*
 
@@ -50,6 +32,5 @@
     a 10, pois se o número aleatório for 9.6, por exemplo, será arredondado para 10. 
 
     */
-
 
 </script>
